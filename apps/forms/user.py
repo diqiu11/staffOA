@@ -187,32 +187,32 @@ class UserForm(FlaskForm):
         ]
     )
 
-    # 登录账号自定义重复性验证
-    # def validate_username(self, field):
-    #     # 查询单条数据
-    #     if not field.data and User.query.filter(User.username == field.data).first():
-    #         raise ValidationError("登录账号不能重复")
+   # 登录账号自定义重复性验证
+    def validate_username(self, field):
+        # 查询单条数据
+        if not field.data and User.query.filter(User.username == field.data).first():
+            raise ValidationError("登录账号不能重复")
 
 
-# 状态设置表单
-# class UserStatusForm(FlaskForm):
-#     # 用户ID
-#     id = IntegerField(
-#         # 文本描述
-#         label='用户ID',
-#         # 验证规则
-#         validators=[
-#             NumberRange(min=0, message='用户ID必须大于0')
-#         ]
-#     )
-#     # 用户状态
-#     status = IntegerField(
-#         label='用户状态',
-#         validators=[
-#             DataRequired(message='用户状态不能为空'),
-#             NumberRange(min=1, max=2, message='用户状态值在1~2之间')
-#         ]
-#     )
+#状态设置表单
+class UserStatusForm(FlaskForm):
+    # 用户ID
+    id = IntegerField(
+        # 文本描述
+        label='用户ID',
+        # 验证规则
+        validators=[
+            NumberRange(min=0, message='用户ID必须大于0')
+        ]
+    )
+    # 用户状态
+    status = IntegerField(
+        label='用户状态',
+        validators=[
+            DataRequired(message='用户状态不能为空'),
+            NumberRange(min=1, max=2, message='用户状态值在1~2之间')
+        ]
+    )
 
 
 # 修改个人信息表单验证针对个人用户
