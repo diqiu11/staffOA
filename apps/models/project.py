@@ -9,7 +9,7 @@ class Project(base_model, base_db):
     # 设置表名
     __tablename__ = DB_PREFIX + "project"
     # 项目名称
-    name = db.Column(db.String(255), nullable=False, comment="项目名称")
+    name = db.Column(db.String(150), nullable=False, comment="项目名称")
     # 项目状态：1-在用 2-停用
     status = db.Column(db.Integer, default=0, comment="项目状态：1-在用 2-停用")
     # 项目排序
