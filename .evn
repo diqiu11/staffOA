@@ -1,0 +1,42 @@
+# 应用名称
+FLASK_NAME = Flask+AntdVue旗舰版
+# 应用版本
+FLASK_VERSIONS = v2.1.0
+# 应用秘钥
+FLASK_SECRET_KEY = 'd67beaf46fbf4f048d2eeb26fd62ea49'
+# 应用运行地址
+FLASK_HOST = 127.0.0.1
+# 应用运行端口
+FLASK_PORT = 8022
+# 应用启动文件
+FLASK_APP = app.py
+# 应用环境变量
+FLASK_ENV = development
+# 是否DEBUG模式：是-True,否-False
+FLASK_DEBUG = True
+# 是否DEMO模式：是-True,否-False
+FLASK_DEMO = False
+# 应用文件上传路径
+FLASK_UPLOAD_DIR = D:\DjangoAdmin\DjangoAdmin_Flask_AntdVue\uploads
+# 应用图片域名
+FLASK_IMAGE_URL = 'http://images.flask.antdvue'
+
+
+# =============================================== 数据库配置 =================================================
+
+# 数据库驱动
+DB_DRIVER = 'mysql'
+# 数据库地址
+DB_HOST = '127.0.0.1'
+# 数据库端口
+DB_PORT = 3306
+# 数据库名称
+DB_DATABASE = 'staffOA'
+# 数据库账号
+DB_USERNAME = 'root'
+# 数据库密码
+DB_PASSWORD = 'qhl123123'
+# 数据表前缀
+DB_PREFIX = 't_oa_'
+# 是否开启调试模式：是-True,否-False
+DB_DEBUG = True
