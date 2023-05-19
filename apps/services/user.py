@@ -2,8 +2,6 @@ from flask import request
 from sqlalchemy import and_
 
 import utils.dict
-from apps.constants.constants import GENDER_LIST
-from apps.constants.message import PAGE_LIMIT
 from apps.forms.user import UserForm, UserStatusForm, UpdatePwdForm, UserInfoForm, ResetPwdForm
 from apps.models.department import Dept
 #from apps.models.level import Level
@@ -13,7 +11,7 @@ from apps.models.user_role import UserRole
 from apps.services import user_role
 from extends import db
 from utils import R, regular, md5
-from utils.utils import getImageURL, uid, saveImage
+from utils.utils import uid
 
 
 # 查询用户分页数据
@@ -21,7 +19,7 @@ def UserList():
     # 页码
     page = int(request.args.get("page", 1))
     # 每页数
-    limit = int(request.args.get("limit", PAGE_LIMIT))
+    limit = int(request.args.get("limit", 10))
     # 实例化查询对象
     query = User.query.filter(User.is_delete == 0)
 

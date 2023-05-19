@@ -26,6 +26,8 @@ FLASK_ENV = os.getenv('FLASK_ENV', 'development')
 FLASK_ROOT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 # 应用文件存储路径
 FLASK_UPLOAD_DIR = os.getenv('FLASK_UPLOAD_DIR', os.path.join(FLASK_ROOT_PATH, '/uploads'))
+# 临时文件路径
+FLASK_TEMP_PATH = FLASK_UPLOAD_DIR + '/temp'
 
 # 应用运行地址
 FLASK_HOST = os.getenv('FLASK_HOST', '127.0.0.1')
