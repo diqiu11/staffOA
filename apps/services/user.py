@@ -27,14 +27,14 @@ def UserList():
     realname = request.args.get('realname')
     if realname:
         query = query.filter(User.realname.like('%' + realname + '%'))
-    # 性别
-    gender = request.args.get('gender')
-    if gender:
-        query = query.filter(User.gender == gender)
-    # 用户状态
-    status = request.args.get('status')
-    if status:
-        query = query.filter(User.status == status)
+    # # 性别
+    # gender = request.args.get('gender')
+    # if gender:
+    #     query = query.filter(User.gender == gender)
+    # # 用户状态
+    # status = request.args.get('status')
+    # if status:
+    #     query = query.filter(User.status == status)
     # 排序
     query = query.order_by(User.id.asc())
     # 记录总数
